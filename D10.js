@@ -431,7 +431,7 @@ return document.querySelectorAll("td")
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+/*
 const printAllTdText = function () {
   const allTds = document.querySelectorAll("td"); // seleziona tutti i <td>
   
@@ -445,7 +445,7 @@ const printAllTdText = function () {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-
+/*
 const LinksRed = function () {
 
   const allLinks = document.querySelectorAll("a");
@@ -455,13 +455,13 @@ const LinksRed = function () {
 
   });
 };
-
+*/
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-const addListItem = function(text) {
+/*const addListItem = function(text) {
   const ul = document.getElementById("myList"); 
 
   const li = document.createElement("li");    
@@ -470,26 +470,27 @@ const addListItem = function(text) {
 
   ul.appendChild(li);                        
 }
+*/
 
 
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-
+/*
 const clearList = function() {
   const ul = document.getElementById("myList");
   ul.innerHTML = ""; // rimuove tutto il contenuto interno della lista
 };
 
-
+*/
 
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-
+/*
 const classToAllTr = function() {
   const allTrs = document.querySelectorAll("tr");
 
@@ -499,7 +500,7 @@ const classToAllTr = function() {
 };
 
 
-
+*/
 
 
 // [EXTRA] JS Avanzato
@@ -515,6 +516,22 @@ const classToAllTr = function() {
   ***
 
 */
+
+
+const halfTree = function(n) {
+
+  for (let i = 1; i <= n; i++) {
+
+
+    console.log("*".repeat(i));
+  }
+};
+
+halfTree(5);
+
+
+
+
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -534,7 +551,7 @@ const classToAllTr = function() {
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
-const movies = [
+/*const movies = [
   {
     Title: 'The Lord of the Rings: The Fellowship of the Ring',
     Year: '2001',
@@ -652,5 +669,5 @@ const movies = [
 
 
 
-
+*/
 
