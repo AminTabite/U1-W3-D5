@@ -69,7 +69,7 @@ REGOLE
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
-/*onst dice = function() {
+/*const dice = function() {
 
 
 return Math.ceil(Math.random()*6) ;
@@ -193,19 +193,22 @@ console.log("oggi é" + "   " + whatDayIsIt())
   return Math.floor(Math.random() * 6) + 1;
 };
 
-// Funzione rollTheDices che chiama dice() n volte
+
 const rollTheDices = function(n) {
   const values = [];
+
   let sum = 0;
 
   for (let i = 0; i < n; i++) {
     const result = dice();
+
     values.push(result);
     sum += result;
   }
 
   return {
     sum: sum,
+
     values: values
   };
 };
@@ -339,6 +342,17 @@ console.log(onlyTheYears());
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+/*const onlyInLastMillennium = function() {
+  return movies
+
+    .filter(movie => parseInt(movie.Year) < 2000)
+
+    .map(movie => movie.Title);
+};
+
+console.log(onlyInLastMillennium());
+*/
+
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */ 
@@ -418,23 +432,75 @@ return document.querySelectorAll("td")
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+const printAllTdText = function () {
+  const allTds = document.querySelectorAll("td"); // seleziona tutti i <td>
+  
+  for (let i = 0; i < allTds.length; i++) {
+    console.log(allTds[i].textContent); // stampa il testo dentro ogni <td>
+  }
+};
 
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+
+const LinksRed = function () {
+
+  const allLinks = document.querySelectorAll("a");
+  allLinks.forEach(link => {
+    
+    link.style.backgroundColor = "red";
+
+  });
+};
+
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+const addListItem = function(text) {
+  const ul = document.getElementById("myList"); 
+
+  const li = document.createElement("li");    
+
+  li.textContent = text;                     
+
+  ul.appendChild(li);                        
+}
+
+
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const clearList = function() {
+  const ul = document.getElementById("myList");
+  ul.innerHTML = ""; // rimuove tutto il contenuto interno della lista
+};
+
+
+
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+
+const classToAllTr = function() {
+  const allTrs = document.querySelectorAll("tr");
+
+  allTrs.forEach(tr => {
+    tr.setAttribute("class", "test");
+  });
+};
+
+
+
+
 
 // [EXTRA] JS Avanzato
 
